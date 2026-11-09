@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushi Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand">Mochi <span>Sushi Bar</span></div>
+      <nav class="navs">
+        <a class="pill" href="#build">✨ Build your box</a>
+        <a class="pill" id="cart-pill" href="#cart" aria-label="My sushi bar (cart)">🛒 My sushi bar <span id="cart-count" hidden>0</span></a>
+      </nav>
+    </header>
+    <button id="back" class="pill" hidden>← Back</button>
+    <div id="hint" class="pill">Click the sushi platter to take a closer look</div>
+    <div id="tip" hidden></div>
+    <div id="bubble" hidden role="status" aria-live="polite">
+      <div class="b-name">Mochi 🐾</div>
+      <div class="b-text"></div>
+      <div class="b-actions"></div>
+    </div>
+
+    <aside id="detail" hidden aria-live="polite">
+      <span class="chip" id="d-cat"></span>
+      <h1 id="d-title"></h1>
+      <div class="jp" id="d-jp"></div>
+      <p id="d-desc"></p>
+      <div id="d-inside-wrap">
+        <h3>What's inside</h3>
+        <ul class="inside" id="d-inside"></ul>
+      </div>
+      <div class="buy">
+        <div class="price" id="d-price"></div>
+        <button class="btn" id="d-add">+ Add to my sushi bar</button>
+      </div>
+      <div class="links"><a id="d-view" href="#">🔍 View in 3D</a><a href="#build">🍱 Build my own box</a></div>
+    </aside>
+
+    <aside id="builder" hidden aria-live="polite">
+      <span class="chip">Build your own</span>
+      <h1>Your sushi box</h1>
+      <h3>1 · Choose a box</h3>
+      <div class="seg" id="b-boxes"></div>
+      <h3>2 · Pick your pieces <span class="muted" id="b-count"></span></h3>
+      <div class="palette" id="b-palette"></div>
+      <h3>In your box</h3>
+      <div class="ings" id="b-list"></div>
+      <div class="buy">
+        <div class="price" id="b-price"></div>
+        <button class="btn" id="b-add" disabled>+ Add box to my sushi bar</button>
+      </div>
+    </aside>
+
+    <div id="page" hidden><div class="card"></div></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
